@@ -7,7 +7,7 @@ const FaqSideBar = ({blogsideBarParagraph}) => {
         <div className='shadow-es rounded-3 py-3 px-3 mt-4 mt-lg-0 text-center'>
 
                     <div sm className='dir-r pb-2 pt-1  h3 text-center'>
-                            <Link to="/" className='text-decoration-none text-es'>Amlak Omid</Link>
+                            <Link to="/" className='text-decoration-none text-es'>املاک امید</Link>
                     </div>
 
                     <h6 className='title-text f-18'>آژانس مشاوره املاک امید</h6>

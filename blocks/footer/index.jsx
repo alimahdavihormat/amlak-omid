@@ -13,7 +13,7 @@ function Footer() {
           'href' : '/Contact',
         },
         {
-          'title': 'بلاگ',
+          'title': 'مجله املاک',
           'href' : '/Articles',
         },
         {
@@ -49,19 +49,11 @@ function Footer() {
             <Col md={4} sm={12} className='border-start border-3'>
               <List lists={list2}/>
             </Col>
-            <Col md={4} sm={12} className='border-3 d-flex justify-content-between align-items-center'>
-              <img src='/img/enamad1.png' className='w-100' />
-              <img src='/img/enamad2.png' className='w-100'/>
-              <img src='/img/enamad3.png' className='w-100'/>
-            </Col>
+            <Col md={4} sm={12} className='py-3'><h2 className="h5">املاک امید پرند</h2><p>جست‌وجوی خرید، فروش و اجاره ملک در فازهای پرند</p></Col>
             <Col sm={12} className='pt-3 px-4'>
               <div className='d-flex flex-md-row flex-column text-sm-center justify-content-md-between border-top border-3 pt-3'>
-                  <p className='text-sm-center'>کلیه حقوق این سایت متعلق به گروه املاک امیداست.</p>
-                  <div>
-                    <FontAwesomeIcon className='text-secondary h4 ms-3' icon={faPinterest} />
-                    <FontAwesomeIcon className='text-secondary h4 ms-3' icon={faInstagram} />
-                    <FontAwesomeIcon className='text-secondary h4' icon={faFacebook} />
-                  </div>
+                  <p className='text-sm-center'>کلیه حقوق این سایت متعلق به گروه املاک امید است.</p>
+
               </div>
             </Col>
           </Row>

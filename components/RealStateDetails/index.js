@@ -14,7 +14,7 @@ const RealStateDetails = () => {
                         name='اقای صادقی'
                         user='نام مدیر'
                         ActivityBasin='حوضه فعالیت'
-                        city='شیراز محله معالی آباد'
+                        city='پرند'
                         Property='تعداد ملک'
                         NumberProperty='6'
                         consultants='تعداد مشاورین'

@@ -15,7 +15,7 @@ export default function Breadcrumb() {
       >
         Library
       </BSBreadcrumb.Item>
-      <BSBreadcrumb.Item active>Data</BSBreadcrumb.Item>
+      <BSBreadcrumb.Item active>اطلاعات</BSBreadcrumb.Item>
     </BSBreadcrumb>
   )
 }

@@ -16,7 +16,7 @@ export default async function handler(
 
 async function get(req, res) {
   const obj = await prisma.agency.findMany({
-    where: { isActive: true },
+    where: { isActive: true, city: { name: "پرند" } },
     select: {
       id: true,
       name: true,
@@ -35,7 +35,7 @@ async function get(req, res) {
 
   const agencies = obj.map((agency) => {
     const totalRate = agency.rate.reduce((acc, curr) => acc + curr.rate, 0);
-    const avgRate = totalRate / agency.rate.length;
+    const avgRate = agency.rate.length ? totalRate / agency.rate.length : 0;
     return { ...agency, rate: avgRate };
   });
 

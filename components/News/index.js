@@ -88,9 +88,9 @@ export default () => {
 
   useEffect(() => {
     getCity();
-  }, [city]);
+  }, []);
   useEffect(() => {
-    getCityArea();
+    if (city) getCityArea();
   }, [city]);
 
   function getCity() {
@@ -98,7 +98,9 @@ export default () => {
     axios
       .get(getCityApi)
       .then((res) => {
-        setCityList(res.data);
+        const cities = res.data.filter(item => item.name === "پرند");
+        setCityList(cities);
+        if (cities.length) setCity(cities[0].id);
         if (res.status === 200) {
           setShowLoading(false);
         }
@@ -214,7 +216,7 @@ export default () => {
           onChange={(e) => setCity(e.target.value)}
           value={city}
         >
-          <option>شهر</option>
+          <option value="">شهر</option>
           {cityList?.map((data, i) => {
             return (
               <option key={data.id} value={data.id}>
@@ -230,7 +232,7 @@ export default () => {
           onChange={(e) => setArea(e.target.value)}
           value={area}
         >
-          <option>محدوده</option>
+          <option value="">محدوده</option>
           {cityAreaList?.map((data, i) => {
             return (
               <option key={data.id} value={data.id}>

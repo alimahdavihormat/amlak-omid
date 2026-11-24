@@ -86,7 +86,7 @@
         return (
             <>
             <div className="p-2 pt-5">
-                <h2 >cityArea
+                <h2 >محدوده
                 <button className="ms-2 me-2" onClick={() => openDialoge()}>+</button>
                 </h2>
                
@@ -95,13 +95,13 @@
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">name</th>
-<th scope="col">city</th>
-<th scope="col">realEstate</th>
-<th scope="col">agency</th>
-<th scope="col">createdAt</th>
+                <th scope="col">نام</th>
+<th scope="col">شهر</th>
+<th scope="col">ملک</th>
+<th scope="col">مشاور املاک</th>
+<th scope="col">تاریخ ایجاد</th>
 
-        <th scope="col">Actions</th>
+        <th scope="col">عملیات</th>
 
                 </tr >
             </thead >
@@ -118,8 +118,8 @@
 <td>{data.createdAt}</td>
 
                         <td scope="row">
-                            <button className='btn btn-success' onClick={()=>{remove(data)}}> delete </button>
-                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> edit </button>
+                            <button className='btn btn-success' onClick={()=>{remove(data)}}> حذف </button>
+                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> ویرایش </button>
                         </td>
                     </tr>
                     )
@@ -139,8 +139,8 @@
     <Form dir='rtl' name="submitForm" id="submitForm">
         
                 <Form.Group className="mb-3" controlId="name">
-                <Form.Label>name</Form.Label>
-                <Form.Control value={modalObj?.name} name="name" type="string" placeholder="Enter name" />
+                <Form.Label>نام</Form.Label>
+                <Form.Control value={modalObj?.name} name="name" type="string" placeholder="نام را وارد کنید" />
                 </Form.Group>
                 
 

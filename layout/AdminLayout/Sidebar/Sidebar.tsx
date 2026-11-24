@@ -32,8 +32,8 @@ export default function Sidebar(props: { isShow: boolean; isShowMd: boolean }) {
       id="sidebar"
     >
       <div className="sidebar-brand d-none d-md-flex align-items-center justify-content-center">
-        <span className="sidebar-brand-full">Amlak Omid</span>
-        <span className="sidebar-brand-narrow d-none">Omid</span>
+        <span className="sidebar-brand-full">املاک امید</span>
+        <span className="sidebar-brand-narrow d-none">امید</span>
       </div>
 
       <div className="sidebar-nav flex-fill">
@@ -45,7 +45,7 @@ export default function Sidebar(props: { isShow: boolean; isShowMd: boolean }) {
         className="sidebar-toggler d-none d-md-inline-block rounded-0 text-start pe-4 fw-bold shadow-none"
         onClick={toggleIsNarrow}
         type="button"
-        aria-label="sidebar toggler"
+        aria-label="تغییر اندازه منو"
       >
         <FontAwesomeIcon
           className="sidebar-toggler-chevron"

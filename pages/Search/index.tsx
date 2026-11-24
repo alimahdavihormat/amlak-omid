@@ -32,12 +32,14 @@ const Buy = (props: any) => {
   const { setShowLoading } = useContext(context);
   const [properties, setProperties] = useState([]);
   const [realEstateList, setRealEstateList] = useState([]);
+  const [searchError, setSearchError] = useState(false);
+  const [searchLoading, setSearchLoading] = useState(true);
 
 
   useEffect(() => {
     // fetchData({ selected: router.query.pageNumber })
-    getRealEstate()
-  }, []);
+    if (router.isReady) getRealEstate()
+  }, [router.isReady, router.asPath]);
 
 
   function getRealEstate() {
@@ -48,17 +50,22 @@ const Buy = (props: any) => {
     //   searchQuery.push(`${e}=${router.query[e]}`);
     // })
 
+    setSearchLoading(true);
+    setSearchError(false);
     setShowLoading(true);
     axios
       .post(searchRealEstateApi, router.query)
       .then((res) => {
         setRealEstateList(res.data);
+        setSearchLoading(false);
         if (res.status === 200) {
           setShowLoading(false);
         
         }
       })
       .catch((err) => {
+        setSearchError(true);
+        setSearchLoading(false);
         if (err.response?.data) {
           err?.response?.data?.errors?.map((issue) => toast.error(issue));
         } else {
@@ -116,7 +123,7 @@ const Buy = (props: any) => {
 <Row>
 
 
-{realEstateList.length > 0 ? (
+{searchLoading ? <p className="text-center">در حال دریافت آگهی‌ها...</p> : searchError ? <p className="text-center text-danger" role="alert">دریافت آگهی‌ها ممکن نیست. لطفاً دوباره تلاش کنید.</p> : realEstateList.length > 0 ? (
       realEstateList.map((data) => {
         return (<Estate
           key={data.id}

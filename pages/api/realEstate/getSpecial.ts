@@ -20,6 +20,7 @@ async function get(req: NextApiRequest, res: NextApiResponse) {
     const obj = await prisma.realEstate.findFirst({
         where: {
             isActive: true,
+            city: { name: "پرند" },
             assignmentType : "special"
         },
       select: {

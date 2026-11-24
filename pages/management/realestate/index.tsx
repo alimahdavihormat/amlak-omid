@@ -87,7 +87,7 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
         return (
             <>
             <div className="p-2 pt-5">
-                <h2 >realEstate
+                <h2 >ملک
                 <button className="ms-2 me-2" onClick={() => openDialoge()}>+</button>
                 </h2>
                
@@ -96,26 +96,26 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">agency</th>
-<th scope="col">user</th>
-<th scope="col">name</th>
-<th scope="col">phoneNumber</th>
-<th scope="col">description</th>
-<th scope="col">roomCount</th>
-<th scope="col">Photos</th>
-<th scope="col">assignmentType</th>
-<th scope="col">type</th>
-<th scope="col">price</th>
-<th scope="col">areaName</th>
-<th scope="col">cityName</th>
-<th scope="col">cityArea</th>
-<th scope="col">longitude</th>
-<th scope="col">latitude</th>
-<th scope="col">createdAt</th>
-<th scope="col">updatedAt</th>
-<th scope="col">isActive</th>
+                <th scope="col">مشاور املاک</th>
+<th scope="col">کاربر</th>
+<th scope="col">نام</th>
+<th scope="col">شماره تماس</th>
+<th scope="col">توضیحات</th>
+<th scope="col">تعداد خواب</th>
+<th scope="col">تصاویر</th>
+<th scope="col">نوع واگذاری</th>
+<th scope="col">نوع ملک</th>
+<th scope="col">قیمت</th>
+<th scope="col">محدوده</th>
+<th scope="col">شهر</th>
+<th scope="col">محدوده</th>
+<th scope="col">طول جغرافیایی</th>
+<th scope="col">عرض جغرافیایی</th>
+<th scope="col">تاریخ ایجاد</th>
+<th scope="col">تاریخ ویرایش</th>
+<th scope="col">فعال</th>
 
-        <th scope="col">Actions</th>
+        <th scope="col">عملیات</th>
 
                 </tr >
             </thead >
@@ -145,8 +145,8 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
 <td>{data.isActive}</td>
 
                         <td scope="row">
-                            <button className='btn btn-success' onClick={()=>{remove(data)}}> delete </button>
-                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> edit </button>
+                            <button className='btn btn-success' onClick={()=>{remove(data)}}> حذف </button>
+                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> ویرایش </button>
                         </td>
                     </tr>
                     )
@@ -177,35 +177,35 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
           </select>
             
                 <Form.Group className="mb-3" controlId="name">
-                <Form.Label>name</Form.Label>
-                <Form.Control value={modalObj?.name} name="name" type="string" placeholder="Enter name" />
+                <Form.Label>نام</Form.Label>
+                <Form.Control value={modalObj?.name} name="name" type="string" placeholder="نام را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="phoneNumber">
-                <Form.Label>phoneNumber</Form.Label>
-                <Form.Control value={modalObj?.phoneNumber} name="phoneNumber" type="string" placeholder="Enter phoneNumber" />
+                <Form.Label>شماره تماس</Form.Label>
+                <Form.Control value={modalObj?.phoneNumber} name="phoneNumber" type="string" placeholder="شماره تماس را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="description">
-                <Form.Label>description</Form.Label>
-                <Form.Control value={modalObj?.description} name="description" type="string" placeholder="Enter description" />
+                <Form.Label>توضیحات</Form.Label>
+                <Form.Control value={modalObj?.description} name="description" type="string" placeholder="توضیحات را وارد کنید" />
                 </Form.Group>
                 
 
             <Form.Group className="mb-3" controlId="assignmentType">
-            <Form.Label>assignmentType</Form.Label>
+            <Form.Label>نوع واگذاری</Form.Label>
             <Form.Select  name="assignmentType">
-            <option value="">select</option>
+            <option value="">انتخاب کنید</option>
            
-                    <option value="rental">rental</option>
+                    <option value="rental">رهن و اجاره</option>
 
                 
-                    <option value="forSale">forSale</option>
+                    <option value="forSale">فروش</option>
 
                 
-                    <option value="fastSale">fastSale</option>
+                    <option value="fastSale">فروش فوری</option>
 
                 
           </Form.Select>
@@ -213,23 +213,23 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
             
 
             <Form.Group className="mb-3" controlId="type">
-            <Form.Label>type</Form.Label>
+            <Form.Label>نوع ملک</Form.Label>
             <Form.Select  name="type">
-            <option value="">select</option>
+            <option value="">انتخاب کنید</option>
            
-                    <option value="commercial">commercial</option>
+                    <option value="commercial">تجاری</option>
 
                 
-                    <option value="apartment">apartment</option>
+                    <option value="apartment">آپارتمان</option>
 
                 
-                    <option value="villaGarden">villaGarden</option>
+                    <option value="villaGarden">ویلایی / باغ</option>
 
                 
-                    <option value="land">land</option>
+                    <option value="land">زمین</option>
 
                 
-                    <option value="independents">independents</option>
+                    <option value="independents">مستقلات</option>
 
                 
           </Form.Select>
@@ -237,14 +237,14 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
             
 
                 <Form.Group className="mb-3" controlId="areaName">
-                <Form.Label>areaName</Form.Label>
-                <Form.Control value={modalObj?.areaName} name="areaName" type="string" placeholder="Enter areaName" />
+                <Form.Label>محدوده</Form.Label>
+                <Form.Control value={modalObj?.areaName} name="areaName" type="string" placeholder="محدوده را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="cityName">
-                <Form.Label>cityName</Form.Label>
-                <Form.Control value={modalObj?.cityName} name="cityName" type="string" placeholder="Enter cityName" />
+                <Form.Label>شهر</Form.Label>
+                <Form.Control value={modalObj?.cityName} name="cityName" type="string" placeholder="شهر را وارد کنید" />
                 </Form.Group>
                 
 
@@ -260,14 +260,14 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
           </select>
             
                 <Form.Group className="mb-3" controlId="longitude">
-                <Form.Label>longitude</Form.Label>
-                <Form.Control value={modalObj?.longitude} name="longitude" type="string" placeholder="Enter longitude" />
+                <Form.Label>طول جغرافیایی</Form.Label>
+                <Form.Control value={modalObj?.longitude} name="longitude" type="string" placeholder="طول جغرافیایی را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="latitude">
-                <Form.Label>latitude</Form.Label>
-                <Form.Control value={modalObj?.latitude} name="latitude" type="string" placeholder="Enter latitude" />
+                <Form.Label>عرض جغرافیایی</Form.Label>
+                <Form.Control value={modalObj?.latitude} name="latitude" type="string" placeholder="عرض جغرافیایی را وارد کنید" />
                 </Form.Group>
                 
 

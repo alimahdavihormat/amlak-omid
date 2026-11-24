@@ -38,7 +38,7 @@ function Card({ img, title, myclass,to,rate }) {
     }
   };
   return (
-    <div className={`dir-l ${myclass}`}>
+    <div className={`${myclass}`}>
       <div className="shadow-sm text-center p-2 overflow-hidden rounded-3">
         <Link href={"/Agencies/"+to}>
           <a className="text-decoration-none">

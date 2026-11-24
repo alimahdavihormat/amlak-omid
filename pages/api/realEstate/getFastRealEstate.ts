@@ -64,6 +64,7 @@ async function get(req, res) {
     obj = await prisma.realEstate.findMany({
         where:{
             isActive: true,
+            city: { name: "پرند" },
             assignmentType: "fastSale"
         },
       select: {

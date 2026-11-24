@@ -111,9 +111,9 @@ function Home() {
       <Row>
         <Col sm={12} className="text-center pt-3">
           <h1 className="h5 fw-bold f-yekan">
-            خرید خانه و آپارتمان با املاک امید
+            خرید، فروش و اجاره ملک در پرند
           </h1>
-          <span>جستجو خود را آغاز کنید!</span>
+          <span>ملک مناسب خود را در فازهای پرند پیدا کنید.</span>
         </Col>
         <Col lg={10} sm={12} className="mx-auto">
           <Search />
@@ -121,9 +121,9 @@ function Home() {
         <Title title="آژانس‌های املاک برتر" />
         <Col sm={12} className="pt-5">
           <Row>
-            <div className="col-sm-12 col-11 mx-auto" dir="ltr">
+            <div className="col-sm-12 col-11 mx-auto">
               <Link href={"/Agencies"}>
-                <a className="text-decoration-none text-secondary float-start">
+                <a className="text-decoration-none text-secondary float-end">
                   مشاهده همه
                 </a>
               </Link>
@@ -145,11 +145,10 @@ function Home() {
           {/* <Sugess /> */}
 
           <Row>
-            <div className="col-sm-12 col-11 mx-auto" dir="ltr">
+            <div className="col-sm-12 col-11 mx-auto">
               <Link href={"/SpecialSale"}>
                 <a
-                  href=""
-                  className="text-decoration-none text-secondary float-start"
+                  className="text-decoration-none text-secondary float-end"
                 >
                   مشاهده همه
                 </a>
@@ -190,7 +189,7 @@ function Home() {
             btn="ثبت‌نام مشاور"
           />
         </Col>
-        <Title title="مجله ملکو" />
+        <Title title="مجله املاک امید" />
 
         {articleList?.map((card) => (
           <ArticleCards

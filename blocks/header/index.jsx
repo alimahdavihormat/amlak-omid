@@ -26,7 +26,7 @@ function Header() {
         onToggle={(e) => {
           setToggle(e);
         }}
-        className="dir-l shadow-sm "
+        className="shadow-sm "
         bg="white"
         expand="lg"
       >
@@ -113,7 +113,7 @@ function Header() {
 
                     <Nav.Item as="li">
                       <Nav.Link href="/Articles" eventKey="link-2">
-                        بلاگ
+                        مجله املاک
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">

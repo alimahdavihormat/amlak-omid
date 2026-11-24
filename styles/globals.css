@@ -415,3 +415,16 @@ a:hover {
 .shadow-sm {
   box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.075) !important;
 }
+/* چیدمان راست‌به‌چپ پنل مدیریت */
+html, body { direction: rtl; }
+.App { text-align: right; }
+.sidebar { right: 0; left: auto; }
+.sidebar + .wrapper { padding-left: 0; padding-right: var(--sidebar-width); }
+@media (max-width: 767.98px) {
+  .sidebar:not(.show) { margin-left: 0; margin-right: calc(-1 * var(--sidebar-width)); }
+  .sidebar + .wrapper { padding-right: 0; padding-left: 0; }
+}
+@media (min-width: 768px) {
+  .sidebar.md-hide { margin-left: 0; margin-right: calc(-1 * var(--sidebar-width)); }
+  .sidebar.md-hide + .wrapper { padding-right: 0; padding-left: 0; }
+}

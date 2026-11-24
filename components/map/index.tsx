@@ -29,8 +29,8 @@ const Popup = dynamic(() => import('react-leaflet').then((mod) => mod.Popup), {
 
  function Map({ getCoordinate }) {
   const [markerPosition, setMarkerPosition] = useState({
-    lat: 29.5926,
-    lng: 52.5836,
+    lat: 35.484,
+    lng: 50.96,
   });
 
  
@@ -40,7 +40,7 @@ const Popup = dynamic(() => import('react-leaflet').then((mod) => mod.Popup), {
       lng: e.target._latlng.lng,
     });
     
-    getCoordinate(markerPosition)
+    if (getCoordinate) getCoordinate({ lat: e.target._latlng.lat, lng: e.target._latlng.lng })
 
   };
 

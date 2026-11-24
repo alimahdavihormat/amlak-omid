@@ -95,12 +95,12 @@
                 <tr>
                 <th scope="col">#</th>
                 <th scope="col">fullName</th>
-<th scope="col">email</th>
-<th scope="col">title</th>
-<th scope="col">description</th>
-<th scope="col">createdAt</th>
+<th scope="col">ایمیل</th>
+<th scope="col">عنوان</th>
+<th scope="col">توضیحات</th>
+<th scope="col">تاریخ ایجاد</th>
 
-        <th scope="col">Actions</th>
+        <th scope="col">عملیات</th>
 
                 </tr >
             </thead >
@@ -117,8 +117,8 @@
 <td>{data.createdAt}</td>
 
                         <td scope="row">
-                            <button className='btn btn-success' onClick={()=>{remove(data)}}> delete </button>
-                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> edit </button>
+                            <button className='btn btn-success' onClick={()=>{remove(data)}}> حذف </button>
+                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> ویرایش </button>
                         </td>
                     </tr>
                     )
@@ -144,20 +144,20 @@
                 
 
                 <Form.Group className="mb-3" controlId="email">
-                <Form.Label>email</Form.Label>
-                <Form.Control value={modalObj?.email} name="email" type="string" placeholder="Enter email" />
+                <Form.Label>ایمیل</Form.Label>
+                <Form.Control value={modalObj?.email} name="email" type="string" placeholder="ایمیل را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="title">
-                <Form.Label>title</Form.Label>
-                <Form.Control value={modalObj?.title} name="title" type="string" placeholder="Enter title" />
+                <Form.Label>عنوان</Form.Label>
+                <Form.Control value={modalObj?.title} name="title" type="string" placeholder="عنوان را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="description">
-                <Form.Label>description</Form.Label>
-                <Form.Control value={modalObj?.description} name="description" type="string" placeholder="Enter description" />
+                <Form.Label>توضیحات</Form.Label>
+                <Form.Control value={modalObj?.description} name="description" type="string" placeholder="توضیحات را وارد کنید" />
                 </Form.Group>
                 
 

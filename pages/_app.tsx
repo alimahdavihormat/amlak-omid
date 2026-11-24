@@ -3,6 +3,7 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../styles/globals.scss';
+import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 import "../styles/globals.css";
 
 

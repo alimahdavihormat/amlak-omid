@@ -94,12 +94,12 @@
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">User</th>
-<th scope="col">agency</th>
-<th scope="col">rate</th>
-<th scope="col">createdAt</th>
+                <th scope="col">کاربر</th>
+<th scope="col">مشاور املاک</th>
+<th scope="col">امتیاز</th>
+<th scope="col">تاریخ ایجاد</th>
 
-        <th scope="col">Actions</th>
+        <th scope="col">عملیات</th>
 
                 </tr >
             </thead >
@@ -115,8 +115,8 @@
 <td>{data.createdAt}</td>
 
                         <td scope="row">
-                            <button className='btn btn-success' onClick={()=>{remove(data)}}> delete </button>
-                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> edit </button>
+                            <button className='btn btn-success' onClick={()=>{remove(data)}}> حذف </button>
+                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> ویرایش </button>
                         </td>
                     </tr>
                     )

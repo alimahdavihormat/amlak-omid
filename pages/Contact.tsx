@@ -78,21 +78,9 @@ function Contact() {
       <Container className="pt-5 pb-4">
         <Row>
           <Col lg={8} md={6} sm={12}>
-            <ListGroup className='List border-0 mt-3'>
-              <ListGroup.Item className='border-0 bg-transparent px-0 d-flex pb-3'>
-                <FontAwesomeIcon className='text-es h3' icon={faMobileAlt} />
-                <a href='tel:09059048626' className='me-3 mt-2 h5 text-decoration-none text-secondary ' >0000--</a>
-                <a href='#' className='me-3 mt-2 h5 text-decoration-none text-secondary ' >0905-000-000</a>
-              </ListGroup.Item>
-              <ListGroup.Item className='border-0 bg-transparent px-0 d-flex pb-3'>
-                <FontAwesomeIcon className='text-es h3' icon={faMapMarkerAlt} />
-                <span className='me-3 mt-2 h5 text-secondary '>شیه </span>
-              </ListGroup.Item>
-              <ListGroup.Item className='border-0 bg-transparent px-0 d-flex pb-3'>
-                <FontAwesomeIcon className='text-es h3' icon={faInstagram} />
-                <a href='' className='me-3 mt-2 h5 text-decoration-none text-secondary ' target="_blank">@</a>
-              </ListGroup.Item>
-            </ListGroup>
+            <h2 className="h5">با املاک امید در ارتباط باشید</h2>
+            <p>برای ارسال نظر، پیشنهاد یا پرسش خود از فرم زیر استفاده کنید.</p>
+            <p>حوزه فعالیت: پرند، استان تهران</p>
           </Col>
           <Col lg={4} md={6} sm={12} className='d-flex align-items-center justify-center' >
             <img className='w-100' src='./img/info-cantat.png' loading="lazy" />
@@ -114,12 +102,6 @@ function Contact() {
               </Form.Group>
               <Btn onClick={(e) => contactFormHandeller(e)} title="ارسال پیام" type="submit" myClass="btn-es lh-lg col-lg-3 col-md-4 col-sm-5 col-6 f-22 mx-auto rounded-5" />
             </Form>
-
-          </Col>
-          <h3 className='text-center  h4 pb-4 mt-5 pt-5'>ما را روی نقشه ببینید.</h3>
-
-          <Col sm={12} className='pb-3'>
-            <MyMap />
 
           </Col>
         </Row>

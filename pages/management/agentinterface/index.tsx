@@ -96,13 +96,13 @@ const [agencySearchList, setagencySearchList] = useState([]);
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">user</th>
-<th scope="col">agency</th>
-<th scope="col">createdAt</th>
-<th scope="col">updatedAt</th>
-<th scope="col">isActive</th>
+                <th scope="col">کاربر</th>
+<th scope="col">مشاور املاک</th>
+<th scope="col">تاریخ ایجاد</th>
+<th scope="col">تاریخ ویرایش</th>
+<th scope="col">فعال</th>
 
-        <th scope="col">Actions</th>
+        <th scope="col">عملیات</th>
 
                 </tr >
             </thead >
@@ -119,8 +119,8 @@ const [agencySearchList, setagencySearchList] = useState([]);
 <td>{data.isActive}</td>
 
                         <td scope="row">
-                            <button className='btn btn-success' onClick={()=>{remove(data)}}> delete </button>
-                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> edit </button>
+                            <button className='btn btn-success' onClick={()=>{remove(data)}}> حذف </button>
+                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> ویرایش </button>
                         </td>
                     </tr>
                     )

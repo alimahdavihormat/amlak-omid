@@ -94,10 +94,10 @@
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">phoneNumber</th>
+                <th scope="col">شماره تماس</th>
 <th scope="col">verificationCode</th>
 
-        <th scope="col">Actions</th>
+        <th scope="col">عملیات</th>
 
                 </tr >
             </thead >
@@ -111,8 +111,8 @@
 <td>{data.verificationCode}</td>
 
                         <td scope="row">
-                            <button className='btn btn-success' onClick={()=>{remove(data)}}> delete </button>
-                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> edit </button>
+                            <button className='btn btn-success' onClick={()=>{remove(data)}}> حذف </button>
+                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> ویرایش </button>
                         </td>
                     </tr>
                     )
@@ -132,8 +132,8 @@
     <Form dir='rtl' name="submitForm" id="submitForm">
         
                 <Form.Group className="mb-3" controlId="phoneNumber">
-                <Form.Label>phoneNumber</Form.Label>
-                <Form.Control value={modalObj?.phoneNumber} name="phoneNumber" type="string" placeholder="Enter phoneNumber" />
+                <Form.Label>شماره تماس</Form.Label>
+                <Form.Control value={modalObj?.phoneNumber} name="phoneNumber" type="string" placeholder="شماره تماس را وارد کنید" />
                 </Form.Group>
                 
 

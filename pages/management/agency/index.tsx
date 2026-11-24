@@ -87,7 +87,7 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
         return (
             <>
             <div className="p-2 pt-5 mt-5">
-                <h2 >agency
+                <h2 >مشاور املاک
                 <button className="ms-2 me-2" onClick={() => openDialoge()}>+</button>
                 </h2>
                
@@ -96,18 +96,18 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">name</th>
-<th scope="col">owner</th>
-<th scope="col">cityArea</th>
-<th scope="col">agents</th>
-<th scope="col">rate</th>
-<th scope="col">createdAt</th>
-<th scope="col">updatedAt</th>
-<th scope="col">isActive</th>
-<th scope="col">RealEstate</th>
-<th scope="col">status</th>
+                <th scope="col">نام</th>
+<th scope="col">مالک</th>
+<th scope="col">محدوده</th>
+<th scope="col">مشاوران</th>
+<th scope="col">امتیاز</th>
+<th scope="col">تاریخ ایجاد</th>
+<th scope="col">تاریخ ویرایش</th>
+<th scope="col">فعال</th>
+<th scope="col">املاک</th>
+<th scope="col">وضعیت</th>
 
-        <th scope="col">Actions</th>
+        <th scope="col">عملیات</th>
 
                 </tr >
             </thead >
@@ -129,8 +129,8 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
 <td>{data.status}</td>
 
                         <td scope="row">
-                            <button className='btn btn-success' onClick={()=>{remove(data)}}> delete </button>
-                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> edit </button>
+                            <button className='btn btn-success' onClick={()=>{remove(data)}}> حذف </button>
+                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> ویرایش </button>
                         </td>
                     </tr>
                     )
@@ -150,8 +150,8 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
     <Form dir='rtl' name="submitForm" id="submitForm">
         
                 <Form.Group className="mb-3" controlId="name">
-                <Form.Label>name</Form.Label>
-                <Form.Control value={modalObj?.name} name="name" type="string,null" placeholder="Enter name" />
+                <Form.Label>نام</Form.Label>
+                <Form.Control value={modalObj?.name} name="name" type="string,null" placeholder="نام را وارد کنید" />
                 </Form.Group>
                 
 
@@ -178,17 +178,17 @@ const [cityAreaSearchList, setcityAreaSearchList] = useState([]);
           </select>
             
             <Form.Group className="mb-3" controlId="status">
-            <Form.Label>status</Form.Label>
+            <Form.Label>وضعیت</Form.Label>
             <Form.Select  name="status">
-            <option value="">select</option>
+            <option value="">انتخاب کنید</option>
            
-                    <option value="accepted">accepted</option>
+                    <option value="accepted">تأیید شده</option>
 
                 
-                    <option value="pending">pending</option>
+                    <option value="pending">در انتظار</option>
 
                 
-                    <option value="denied">denied</option>
+                    <option value="denied">رد شده</option>
 
                 
           </Form.Select>

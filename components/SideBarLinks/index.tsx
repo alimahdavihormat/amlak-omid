@@ -5,7 +5,7 @@ export default function SideBarLinks() {
     <>
       <Col sm className="dir-r pt-1  fw-bold h3 text-center">
         <Link href="/">
-          <span className="text-decoration-none text-es">Amlak Omid</span>
+          <span className="text-decoration-none text-es">املاک امید</span>
         </Link>
       </Col>
       <h3 className="h6 text-secondary">آژانس مشاوره املاک امید</h3>

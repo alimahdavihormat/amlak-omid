@@ -52,7 +52,7 @@ const Login: NextPage = () => {
                 <div className="">
                   <h1>ورود به پنل مدیریت</h1>
 
-                  <form onSubmit={login} className='dir-l'>
+                  <form onSubmit={login} >
                     <InputGroup className="mb-3">
                       <InputGroup.Text>
                         <FontAwesomeIcon
@@ -64,8 +64,8 @@ const Login: NextPage = () => {
                         name="username"
                         required
                         disabled={submitting}
-                        placeholder="Username"
-                        aria-label="Username"
+                        placeholder="نام کاربری"
+                        aria-label="نام کاربری"
                         value={username} onChange={(e) => setUsername(e.target.value)} 
                       />
                     </InputGroup>
@@ -82,8 +82,8 @@ const Login: NextPage = () => {
                         name="password"
                         required
                         disabled={submitting}
-                        placeholder="Password"
-                        aria-label="Password"
+                        placeholder="رمز عبور"
+                        aria-label="رمز عبور"
                         value={password} onChange={(e) => setPassword(e.target.value)}
                       />
                     </InputGroup>

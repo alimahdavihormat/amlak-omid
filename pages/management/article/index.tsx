@@ -94,14 +94,14 @@
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">title</th>
-<th scope="col">summary</th>
-<th scope="col">text</th>
-<th scope="col">normalName</th>
-<th scope="col">articleImage</th>
-<th scope="col">createdAt</th>
+                <th scope="col">عنوان</th>
+<th scope="col">خلاصه</th>
+<th scope="col">متن</th>
+<th scope="col">نام</th>
+<th scope="col">تصویر مقاله</th>
+<th scope="col">تاریخ ایجاد</th>
 
-        <th scope="col">Actions</th>
+        <th scope="col">عملیات</th>
 
                 </tr >
             </thead >
@@ -119,8 +119,8 @@
 <td>{data.createdAt}</td>
 
                         <td scope="row">
-                            <button className='btn btn-success' onClick={()=>{remove(data)}}> delete </button>
-                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> edit </button>
+                            <button className='btn btn-success' onClick={()=>{remove(data)}}> حذف </button>
+                            <button className='btn btn-danger' onClick={()=>{openDialoge(data)}}> ویرایش </button>
                         </td>
                     </tr>
                     )
@@ -140,32 +140,32 @@
     <Form dir='rtl' name="submitForm" id="submitForm">
         
                 <Form.Group className="mb-3" controlId="title">
-                <Form.Label>title</Form.Label>
-                <Form.Control value={modalObj?.title} name="title" type="string" placeholder="Enter title" />
+                <Form.Label>عنوان</Form.Label>
+                <Form.Control value={modalObj?.title} name="title" type="string" placeholder="عنوان را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="summary">
-                <Form.Label>summary</Form.Label>
-                <Form.Control value={modalObj?.summary} name="summary" type="string,null" placeholder="Enter summary" />
+                <Form.Label>خلاصه</Form.Label>
+                <Form.Control value={modalObj?.summary} name="summary" type="string,null" placeholder="خلاصه را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="text">
-                <Form.Label>text</Form.Label>
-                <Form.Control value={modalObj?.text} name="text" type="string" placeholder="Enter text" />
+                <Form.Label>متن</Form.Label>
+                <Form.Control value={modalObj?.text} name="text" type="string" placeholder="متن را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="normalName">
-                <Form.Label>normalName</Form.Label>
-                <Form.Control value={modalObj?.normalName} name="normalName" type="string,null" placeholder="Enter normalName" />
+                <Form.Label>نام</Form.Label>
+                <Form.Control value={modalObj?.normalName} name="normalName" type="string,null" placeholder="نام را وارد کنید" />
                 </Form.Group>
                 
 
                 <Form.Group className="mb-3" controlId="articleImage">
-                <Form.Label>articleImage</Form.Label>
-                <Form.Control value={modalObj?.articleImage} name="articleImage" type="string,null" placeholder="Enter articleImage" />
+                <Form.Label>تصویر مقاله</Form.Label>
+                <Form.Control value={modalObj?.articleImage} name="articleImage" type="string,null" placeholder="تصویر مقاله را وارد کنید" />
                 </Form.Group>
                 
 

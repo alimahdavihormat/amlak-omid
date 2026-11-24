@@ -37,7 +37,7 @@ export default function Header(props: HeaderProps) {
         <Link href="/">
           <a className=" d-md-none text-decoration-none text-es">
        
-              Amlak Omid
+              املاک امید
              
           
           </a>

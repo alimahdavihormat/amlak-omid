@@ -19,7 +19,8 @@ export default async function handler(
 // async function get(req: NextApiRequest, res: NextApiResponse) { 
 //    const obj = await prisma.realEstate.findMany({
 //     where : {
-//         assignmentType : "forSale"
+//         assignmentType : "forSale",
+        isActive: true, city: { name: "پرند" }
 //         // AdStatus: "active"
 //     },
 //       select: {
@@ -77,6 +78,7 @@ async function get(req, res) {
     obj = await prisma.realEstate.findMany({
       where :{
         assignmentType : "forSale",
+        isActive: true, city: { name: "پرند" },
       },
       select: {
         id: true,
@@ -122,7 +124,8 @@ async function get(req, res) {
   }  else {
     obj = await prisma.realEstate.findMany({
       where: {
-        assignmentType : "forSale"
+        assignmentType : "forSale",
+        isActive: true, city: { name: "پرند" }
       },
       select: {
         id: true,

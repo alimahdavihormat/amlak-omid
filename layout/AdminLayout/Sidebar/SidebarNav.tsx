@@ -154,7 +154,7 @@ export default function SidebarNav() {
       <SidebarNavItem icon={faGauge} href="/">
         داشتبرد
         <small className="me-auto">
-          <Badge bg="info">NEW</Badge>
+          <Badge bg="info">جدید</Badge>
         </small>
       </SidebarNavItem>
 
@@ -226,13 +226,13 @@ export default function SidebarNav() {
     
 
 
-      <SidebarNavGroup toggleIcon={faBell} toggleText="Notifications">
+      <SidebarNavGroup toggleIcon={faBell} toggleText="اعلان‌ها">
 
       </SidebarNavGroup>
 
  
 
-      <SidebarNavTitle>Extras</SidebarNavTitle>
+      <SidebarNavTitle>سایر موارد</SidebarNavTitle>
 
 
       
